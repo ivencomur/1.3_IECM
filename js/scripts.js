@@ -13,7 +13,7 @@ for (let i = 0; i < pokemonList.length; i++) {
     //The original output I wrote plus the new output label.
     document.write (pokemonList [i].name  + " ("+ pokemonList [i].height + pokemonList [i].types+") >>>Wow, that Pokémon is tall!<<<.");
     //This part was really confusing for me. I used AI suggestions because my code was disconected from the last statement/output.
-    PukumukusBig = true;      
+    PukumukusTall = true;      
    }   
     else {
      //The original output I wrote needed also to be included in the code. Otherwise my HTML, I guess, wouldn´t have shown anything.
