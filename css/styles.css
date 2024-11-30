@@ -1,0 +1,377 @@
+body {
+    font-family: 'Moderustic', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.button__secondary {
+    background-color: #e0b354;
+    color: #2b2b2b;
+}
+
+a {
+    color: #357b70;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+a:active {
+    color: #489c79;
+}
+
+#my-link {
+    color: green;
+}
+
+.my-link {
+    color: blue;
+}
+
+span {
+    box-sizing: border-box;
+    border: 2px dashed rgba(15, 109, 116, 0.378);
+    text-align: center;
+    padding: 10px;
+}
+
+.header__title {
+    margin: 0 auto;
+}
+
+.navigation__logo {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile {
+    min-width: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile__portrait {
+    float: right;
+    width: 300px;
+    max-width: 100%;
+    margin-right: 40px;
+    border-radius: 23%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.grid__item__1,
+.grid__item__2,
+.grid__item__3,
+.grid__item__4,
+.grid__item__5,
+.grid__item__6 {
+    background-color: #9bc0eb;
+    padding: 20px;
+    transition: transform 0.7s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid__item__1:hover,
+.grid__item__2:hover,
+.grid__item__3:hover,
+.grid__item__4:hover,
+.grid__item__5:hover,
+.grid__item__6:hover {
+    transform: scale(1.08);
+    z-index: 1;
+}
+
+.grid__item__1::before,
+.grid__item__2::before,
+.grid__item__3::before,
+.grid__item__4::before,
+.grid__item__5::before,
+.grid__item__6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0066D5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid__item__1:hover::before,
+.grid__item__2:hover::before,
+.grid__item__3:hover::before,
+.grid__item__4:hover::before,
+.grid__item__5:hover::before,
+.grid__item__6:hover::before {
+    opacity: 1;
+}
+
+.grid__item__1 h2,
+.grid__item__2 h2,
+.grid__item__3 h2,
+.grid__item__4 h2,
+.grid__item__5 h2,
+.grid__item__6 h2,
+.grid__item__1 p,
+.grid__item__2 p,
+.grid__item__3 p,
+.grid__item__4 p,
+.grid__item__5 p,
+.grid__item__6 p,
+.grid__item__1 a,
+.grid__item__2 a,
+.grid__item__3 a,
+.grid__item__4 a,
+.grid__item__5 a,
+.grid__item__6 a {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.grid__item__1:hover h2,
+.grid__item__2:hover h2,
+.grid__item__3:hover h2,
+.grid__item__4:hover h2,
+.grid__item__5:hover h2,
+.grid__item__6:hover h2,
+.grid__item__1:hover p,
+.grid__item__2:hover p,
+.grid__item__3:hover p,
+.grid__item__4:hover p,
+.grid__item__5:hover p,
+.grid__item__6:hover p,
+.grid__item__1:hover a,
+.grid__item__2:hover a,
+.grid__item__3:hover a,
+.grid__item__4:hover a,
+.grid__item__5:hover a,
+.grid__item__6:hover a {
+    color: #FFE52E;
+}
+
+
+.grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+}
+
+/* start grid fallback */
+.grid__item {
+    display: inline-block;
+    width: 33%;
+}
+
+/* end grid fallback */
+
+@supports (display: grid) {
+    .grid {
+        display: grid;        
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 18px;
+        margin: 0;
+    }
+
+    .grid__item {
+        background-color: rgb(228, 250, 228);
+        width: auto;
+        min-height: auto;
+        margin: 0;
+    }
+
+    .grid__item:last-child {
+        grid-column: 3 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    @media all and (max-width: 750px) {
+        /* shared code */
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+.button,
+button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.2s;
+    transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+.button,
+button {
+    /* overwrites browser defaults */
+    /* resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* style button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: opacity 0.2s;
+}
+
+ul {
+    list-style-type: none;
+}
